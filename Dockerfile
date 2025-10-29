@@ -1,11 +1,8 @@
-# Use the official PHP + Apache image
-FROM php:8.2-apache
+# Use the official PHP Apache image
+FROM php:8.1-apache
 
-# Copy all project files to Apache's web root
+# Copy all project files to the web root
 COPY . /var/www/html/
 
-# Enable mod_rewrite (optional, but helps if you use .htaccess)
-RUN a2enmod rewrite
-
-# Expose port 80 for web traffic
+# Expose port 80
 EXPOSE 80
